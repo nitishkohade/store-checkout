@@ -5,7 +5,7 @@ public class CheckoutMain {
 	public static void main(String[] args) {
 		ProductList.setProducts();
 		try {
-			ProductList.setProductList("category_A1.json");
+			ProductList.setProductList("category_A.json");
 			ProductList.setProductList("category_B.json");
 			ProductList.setProductList("category_C.json");
 			
