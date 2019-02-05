@@ -1,0 +1,42 @@
+{
+"products": [{
+	"product_name": "Pen",
+	"product_id": "201",
+	"product_category": "C",
+	"product_bar_code": "penandpenciladadaadsdsda6rdd6a8di",
+	"product_price": 20.0,
+	"product_count": 50
+},
+{
+	"product_name": "Dummy Watch",
+	"product_id": "202",
+	"product_category": "C",
+	"product_bar_code": "dummywatchada6rdd6ddd78asdas8d8di",
+	"product_price": 90.0,
+	"product_count": 50
+},
+{
+	"product_name": "Mirror",
+	"product_id": "125",
+	"product_category": "C",
+	"product_bar_code": "mirrorsdsda6rdd678asd8sd7a845gddi",
+	"product_price": 80.0,
+	"product_count": 50
+},
+{
+	"product_name": "Tooth Paste",
+	"product_id": "126",
+	"product_category": "C",
+	"product_bar_code": "Toothpasterdada6rdd678ass8sd7a8di",
+	"product_price": 70.0,
+	"product_count": 50
+},
+{
+	"product_name": "Tooth brush",
+	"product_id": "127",
+	"product_category": "C",
+	"product_bar_code": "toothbrushjgj8adaada6rdd67sd7a8di",
+	"product_price": 40.0,
+	"product_count": 50
+}]
+}

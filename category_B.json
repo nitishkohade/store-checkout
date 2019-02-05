@@ -1,0 +1,42 @@
+{
+"products": [{
+	"product_name": "Cooking Pan",
+	"product_id": "101",
+	"product_category": "B",
+	"product_bar_code": "cookingpan123sdfsfssd34fsdfsfsf",
+	"product_price": 700.0,
+	"product_count": 50
+},
+{
+	"product_name": "Toilet Brush",
+	"product_id": "102",
+	"product_category": "B",
+	"product_bar_code": "toiletbrushrdd6ddddadi78sd7a8di",
+	"product_price": 1000.0,
+	"product_count": 50
+},
+{
+	"product_name": "Small TV",
+	"product_id": "103",
+	"product_category": "B",
+	"product_bar_code": "smallTVadasdas8dtadiudadsds5gddi",
+	"product_price": 900.0,
+	"product_count": 50
+},
+{
+	"product_name": "Mobile cover",
+	"product_id": "104",
+	"product_category": "B",
+	"product_bar_code": "mobilecover678asdas8dtadifh7a8di",
+	"product_price": 1500.0,
+	"product_count": 50
+},
+{
+	"product_name": "Thermos",
+	"product_id": "105",
+	"product_category": "B",
+	"product_bar_code": "thermosasdadstadiudadi78sd7a8di",
+	"product_price": 1900.0,
+	"product_count": 50
+}]
+}

@@ -1,0 +1,42 @@
+{
+"products": [{
+	"product_name": "Dove Shampoo",
+	"product_id": "123",
+	"product_category": "A",
+	"product_bar_code": "doveshampoodsda6rdd678asd7a8di",
+	"product_price": 100.0,
+	"product_count": 50
+},
+{
+	"product_name": "Chocolate Cookies",
+	"product_id": "124",
+	"product_category": "A",
+	"product_bar_code": "chocolatecookiesadadaada67a8di",
+	"product_price": 200.0,
+	"product_count": 50
+},
+{
+	"product_name": "Copper Bottle",
+	"product_id": "125",
+	"product_category": "A",
+	"product_bar_code": "copperbottleadadaads8sd7a845gddi",
+	"product_price": 700.0,
+	"product_count": 50
+},
+{
+	"product_name": "Window Curtain",
+	"product_id": "126",
+	"product_category": "A",
+	"product_bar_code": "windowcurtainadadasdsdada6rd7a8di",
+	"product_price": 300.0,
+	"product_count": 50
+},
+{
+	"product_name": "Peanut butter",
+	"product_id": "127",
+	"product_category": "A",
+	"product_bar_code": "peanutbutteraddsdf234jdi78sd7a8di",
+	"product_price": 150.0,
+	"product_count": 50
+}]
+}
