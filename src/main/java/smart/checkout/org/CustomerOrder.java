@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
-public class CustomerOrder implements Callable<Integer> {
+public class CustomerOrder implements Callable<String> {
 	
 	private Map<String, Integer> orderedProducts;
 	private String customer;
@@ -21,7 +21,7 @@ public class CustomerOrder implements Callable<Integer> {
 		orderedProducts.put(code, count);
 	}
 
-	public Integer call() {
+	public String call() {
 		Checkout checkout = new Checkout();
 		List<String> notPresnt = checkout.checkIfBarCodesExists(orderedProducts);
 		if (notPresnt.size() == 0) {
@@ -40,8 +40,8 @@ public class CustomerOrder implements Callable<Integer> {
 				});
 			}
 		} else {
-			return 0;
+			return "Your order could not be placed, please check your barcodes";
 		}
-		return 1;
+		return "successfully purchased, thanks for shopping with us!!";
 	}
 }
