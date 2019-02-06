@@ -2,8 +2,9 @@ package smart.checkout.org;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.Callable;
 
-public class CustomerOrder extends Thread {
+public class CustomerOrder implements Callable<Integer> {
 	
 	private Map<String, Integer> orderedProducts;
 	private String customer;
@@ -20,21 +21,27 @@ public class CustomerOrder extends Thread {
 		orderedProducts.put(code, count);
 	}
 
-	public void run() {
+	public Integer call() {
 		Checkout checkout = new Checkout();
-		Boolean bool = checkout.purchaseProducts(orderedProducts);
-		List<Product> notAvailableProducts = null;
-		if (bool) {
-			List<FinalProduct> finalProduct = checkout.getTaxableProduct(orderedProducts);
-			double total = checkout.getTotalCost(finalProduct);
-			checkout.generateInvoice(finalProduct, customer, total);
+		List<String> notPresnt = checkout.checkIfBarCodesExists(orderedProducts);
+		if (notPresnt.size() == 0) {
+			Boolean bool = checkout.purchaseProducts(orderedProducts);
+			List<Product> notAvailableProducts = null;
+			if (bool) {
+				List<FinalProduct> finalProduct = checkout.getTaxableProduct(orderedProducts);
+				double total = checkout.getTotalCost(finalProduct);
+				checkout.generateInvoice(finalProduct, customer, total);
+			} else {
+				notAvailableProducts = checkout.productsNotAvailable(orderedProducts);
+				notAvailableProducts
+				.parallelStream()
+				.forEach(p->{
+					System.out.println(customer+": " + p.getProduct_name());
+				});
+			}
 		} else {
-			notAvailableProducts = checkout.productsNotAvailable(orderedProducts);
-			notAvailableProducts
-			.parallelStream()
-			.forEach(p->{
-				System.out.println(customer+": " + p.getProduct_name());
-			});
+			return 0;
 		}
+		return 1;
 	}
 }

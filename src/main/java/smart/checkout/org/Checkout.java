@@ -134,5 +134,16 @@ public class Checkout implements ICheckout{
 		{
 			e.printStackTrace();
 		}
+	}
+	public List<String> checkIfBarCodesExists(Map<String, Integer> orderedProducts) {
+		List<String> notPresent = new ArrayList<>();		
+		orderedProducts.keySet()
+		.stream()
+		.forEach(code -> {
+			if(!ProductList.getProducts().containsKey(code)) {
+				notPresent.add(code);
+			}
+		});		
+		return notPresent;
 	}	
 }
